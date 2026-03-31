@@ -1,1 +1,3 @@
-info sobre el nivel 0
+El nivel 0 no es un nivel de por sí, solo obtenemos credenciales para conectarnos por ssh al juego.
+En preparación a esto cree una máquina virtual con Kali Linux en Oracle Virtual Box
+[imagen Oracle VirtualBox]
