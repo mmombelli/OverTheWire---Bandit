@@ -1,0 +1,4 @@
+- The password for the next level is stored in the file data.txt, which contains base64 encoded data.
+El comando a utilizar es "base64" el cual es un método de codificación de texto. El comando permite codificar de texto plano a base64 o decodificar de base 64 a texto plano.
+La contraseña se encuentra en el archivo "data.txt" y codificado en base64.
+Haciendo uso del concepto de piping podemos formar el siguiente comando : " cat data.txt | base 64 -d ", lo cual devuelve la contraseña.
