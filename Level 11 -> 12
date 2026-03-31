@@ -1,0 +1,6 @@
+- The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+El texto menciona que las letras fueron rotadas 13 posiciones lo que hace pensar en un cifrado Cesar. En este caso es un cifrado César específico en el que se mueven las letras 13 posiciones. Se llama ROT13.
+Una de los comandos recomendados es 'tr' el cual permite traducir o cambiar letras de un set de entrada a otro set de salida, entre otras cosas. Cambiar letras de un set a otro hace pensar en esta "traducción" (cifrado).
+Podemos escribir el comando : " cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' " y obtenemos la contraseña.
+El primer set 'A-Za-z' es el set a buscar en el archivo, el cual marca todas las letras del abecedario.
+El segundo set 'N-ZA-Mn-za-m' es el set que reemplaza al primero con su letra correspondiente ajustando a ROT13.
