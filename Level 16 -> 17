@@ -2,5 +2,11 @@
 First find out which of these ports have a server listening on them. Then find out which of those speak SSL/TLS and which don’t. 
 There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
 
-nc -zv localhost 31000 - 32000 2>&1 | grep succeeded
+* nc -zv localhost 31000 - 32000 2>&1 | grep succeeded 
+nc: utilizada para leer, escribir, redirigir datos y escanear puertos. Permite conexiones TCP/UDP, transferencia de archivos, creación de servidores simples y depuración de red
+nc -zv: -z -> verifica que puertos están abiertos : -v -> (verbose) lo escribe en la terminal
+"2>&1" : redirige el flujo de error estándar (stderr, descriptor 2) al mismo destino que la salida estándar (stdout, descriptor 1) 
+y permite a grep leer el output para, en este caso, diferenciar de los puertos abiertos y los cerrados.
 
+* sslopen s_local -connect localhost:[PUERTO] -> probar en las cinco opciones devueltas. En este caso, el puerto 31790 funcionó
+Escribimos la contraseña y devuelve una key RSA privada para el siguiente nivel.
