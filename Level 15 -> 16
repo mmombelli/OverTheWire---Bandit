@@ -1,0 +1,8 @@
+-The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+SSL/TSL Encryption: Transport Layer Security (SSL es un protocolo ya depreciado y no utilizado), es un protocolo criptográfico para mantener la seguridad en las comunicaciones entre redes. Se utiliza en HTTPS por ejemplo.
+openssl es la herramienta que permite este tipo de conexiones además de tener varias funciones criptográficas, gestiona certificados y tiene operaciones de cifrado y descifrado, entre otras cosas.
+s_client es la herramienta dentro de 'openssl' que permite conectarse a hosts remotos para depurar conexiones seguras, verificar certificados y probar protocolos. 
+openssl s_client implementa un cliente que se conecta al servidor mediante el protocolo SSL/TSL.
+
+*openssl s_client -connect localhost_30001
+Enviamos la contraseña actual y nos devuelve un mensaje de confirmación más la siguiente contraseña.
