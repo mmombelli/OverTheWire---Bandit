@@ -1,0 +1,12 @@
+- The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password,
+but you get a private SSH key that can be used to log into the next level. Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+
+*Las claves SSH son un método de autenticación criptográfica asimétrica (par pública/privada) utilizado en el protocolo Secure Shell (SSH) para acceder de forma segura y sin contraseña a servidores remotos. 
+La clave pública se coloca en el servidor y la privada en el cliente, permitiendo el inicio de sesión cifrado.*
+* scp is a command that uses SSH to transfer data over the network. es un comando que usa SSH para transferir data a traves de una red.
+
+Podemos usar el comando 'scp' (scp p- 2220 bandit13@bandit.labs.overthewire.org:sshkey.private .) (siendo "sshkey.private" el archivo con la clave ssh privada), y conectarnos al siguiente nivel utilizando el comando ssh
+con la opción '-i' : - ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220.
+Previo a esto, el servidor nos menciona que el archivo con la clave privada tiene muchos permisos, por lo tanto usamos el comando 'chmod', que permite cambiar permisos, de la siguiente manera:
+"chmod 700 sshkey.private" siendo 700 que solo el propietario tenga permisos sobre el archivo (7[usuario]=Escritura + Lectura + Ejecución ; 0[grupos]= ningún permiso; 0[otros]= nigún permiso)
+
