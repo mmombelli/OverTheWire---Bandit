@@ -1,0 +1,6 @@
+-The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+
+Al conectarse con ssh, el servidor nos echa inmediatamente con un mensaje de Byebye!
+Por lo tanto podemos volver a utilizar el comando 'scp' para extraer el archivo readme que sabemos que está en home.
+* scp -P 2220 bandit19@bandit.labs.overthewire.org:readme .
+Ingresando la contraseña del nivel, esto nos devuelve el archivo "readme" a nuestra computadora y con 'cat' vemos la contraseña del siguiente nivel.
