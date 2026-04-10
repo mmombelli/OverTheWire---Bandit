@@ -4,6 +4,6 @@
 setuid (short for "set user identity") is a special file permission that allows a user to execute a program with the privileges of the file's owner rather than the user who launched it.
 an executable binary file is a non-human-readable file containing machine code instructions that the CPU can execute directly. To execute you use: ./[file_name]
 
-En este caso recibimos un ejecutable llamado "bandit20-do" al cual ejecutarlo sin argumentos nos dice: "Run a command as another user", o sea corre comandos como el usuario bandit20 con sus permisos
+En este caso recibimos un binario llamado "bandit20-do" al cual ejecutarlo sin argumentos nos dice: "Run a command as another user", o sea corre comandos como el usuario bandit20 con sus permisos
 Útil para ver las credenciales de este usuario, el cual es el siguiente nivel.
 Por lo tanto escribimos: * ./bandit20-do cat /etc/bandit_pass/bandit20  y recibimos la contraseña para el siguiente nivel.
